@@ -8,13 +8,7 @@ public class Category  implements Serializable {
     private long id;
     private string name;
 
-    public Category() {
-    }
-
-    public Category(long id, string name ) {
-        super();
-        this.id = id;
-        this.name =name;
+    public Category(long id, String name) {
     }
 
     public long getId() {
