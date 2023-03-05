@@ -1,30 +1,42 @@
 package com.phtotal.myfirstproject;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Category  implements Serializable {
     private static final long serialVersionUID = 1L;
-    private long id;
-    private string name;
+    private Long id;
+    private String name;
 
-    public Category(long id, String name) {
+    private List<Product> products = new ArrayList<>();
+
+    public Category(Long id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public string getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(string name) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Product> getProducts() {
+        return products;
     }
 
     @Override
