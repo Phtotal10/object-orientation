@@ -22,6 +22,7 @@ public class MyfirstprojectApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args) throws Exception {
+		Double price;
 		Category cat1 = new Category(1L, "Electronics");
 		Category cat2 = new Category(2L, "Books");
 

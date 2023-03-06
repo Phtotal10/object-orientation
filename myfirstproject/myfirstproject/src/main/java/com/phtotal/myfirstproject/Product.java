@@ -1,20 +1,22 @@
 package com.phtotal.myfirstproject;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-@EntityScan
 
+@Entity
 public class Product implements Serializable {
- 
-    private static final long seriaLVersionUID = 1L;
 
+    private static final long seriaLVersionUID = 1L;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double price;
-
+@ManyToOne
+@JoinColumn(name = "category_id")
     private Category category;
     public Product(){
     }

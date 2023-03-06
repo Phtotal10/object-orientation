@@ -1,24 +1,32 @@
 package com.phtotal.myfirstproject;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+@Entity
 public class Category  implements Serializable {
     private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-     @JsonIgnore
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "category")
     private List<Product> products = new ArrayList<>();
 
-    public Category(Long id, String name) {
+    public Category() {
+
+    }
+
+    public Category(Long id, String name ) {
         super();
         this.id = id;
         this.name = name;
-
     }
 
     public Long getId() {
