@@ -1,13 +1,20 @@
 package com.phtotal.myfirstproject;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@EntityScan
+
 public class Product implements Serializable {
+ 
     private static final long seriaLVersionUID = 1L;
+
     private Long id;
     private String name;
     private Double price;
+
     private Category category;
     public Product(){
     }
