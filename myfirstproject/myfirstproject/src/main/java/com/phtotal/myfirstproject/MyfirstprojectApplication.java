@@ -23,13 +23,13 @@ public class MyfirstprojectApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Double price;
-		Category cat1 = new Category(1L, "Electronics");
-		Category cat2 = new Category(2L, "Books");
+		Category cat1 = new Category(null, "Electronics");
+		Category cat2 = new Category(null, "Books");
 
-		Product p1 = new Product(1L, "TV 65", 4200.00, cat1);
-		Product p2 = new Product(2L, "Física Conceitual - Paul G", 120.00, cat2);
-		Product p3 = new Product(3L, "PS5", 2800.00, cat1);
-		Product p4 = new Product(4L, "Harry Potter e a Ordem da Fênix", 100.00, cat2);
+		Product p1 = new Product(null, "TV 65", 4200.00, cat1);
+		Product p2 = new Product(null, "Física Conceitual - Paul G", 120.00, cat2);
+		Product p3 = new Product(null, "PS5", 2800.00, cat1);
+		Product p4 = new Product(null, "Harry Potter e a Ordem da Fênix", 100.00, cat2);
 
 		cat1.getProducts().addAll(Arrays.asList(p1, p3));
 		cat2.getProducts().addAll(Arrays.asList(p2, p4));
